@@ -35,17 +35,33 @@ for number in list1000:
         break
     print(number)
 
-
+# skip over 300-500 and print the rest
 for number in list1000:
     if 300 <= number <= 500:
         continue
     print(number)
 
-# Another way to delete numbers in a cetain range in the middle like 300-500
+# Another way to skip over numbers
 for number in list1000:
     if number >= 300 and number <= 500:
         continue
     print(number)
+
+
+applicants_for_credit = ["Alice", "Bob", "Charlie", "David", "Eve"]
+credit_scores = [720, 680, 590, 610, 750]
+# zip the two lists together and print
+# each applicant's name along with their credit score.
+# if the score is below 600, skip over that applicant.
+# and approve the rest for credit.
+
+
+for applicant, score in zip(applicants_for_credit, credit_scores):
+    # zip function combines two lists into pairs
+    if score < 600:
+        continue
+    print(applicant + " approved for credit with score: " + str(score))
+
 
 
 # Challenge:
