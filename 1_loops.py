@@ -67,6 +67,13 @@ for applicant, score in zip(applicants_for_credit, credit_scores):
 # Challenge:
 # Use a for loop and range to print each subject along with its index:
 # Example output: "Subject 0: Math"
+# subjects = ["Math", "Science", "History", "Art"]
+for index in range(len(subjects)):
+    print("Subject " + str(index) + ":" + subjects[index])
+
+for index in range(len(subjects)-1):
+    # (sometimes) you have to use -1 because range starts at 0
+    print("Subject " + str(index) + ":" + subjects[index])
 
 
 # Given:
@@ -74,3 +81,26 @@ numbers = [5, 10, 15, 20]
 
 # Challenge:
 # Use a for loop to add all the numbers and print the total.
+total = 0 
+# if print inside the loop everytime the total will reset to zero instad of the previous number added
+for number in numbers:
+    # add each number to total
+    total += number
+    # shorthand for total = total + number
+print("total: ", total)
+# if print inside the loop it will print multiple times on the list
+# first time total = 0
+# first time total = 0 + 5
+# first time total = 5 + 10
+# first time total = 15 + 15
+# first time total = 30 + 20
+
+new_numbers = list(range(1, 260001))
+# This creates a list of numbers from 1 to 260
+# Challenge: sum up all the numbers from 1 to 260
+# and print the total
+
+total = 0
+for number in new_numbers:
+    total += number
+print("Total sum from 1 to 260000: ", total)
